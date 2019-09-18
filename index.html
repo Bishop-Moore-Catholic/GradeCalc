@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GradeCalc</title>
+<meta name="author" content="Miko Jimenez">
+<meta name="description" content="Grade Calculator">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-1"></div>
+      <div id="Title" class="col-10 text-center">
+        <div class="jumbotron mb-3">
+          <h1 class="display-4">GradeCalc</h1>
+          <p class="lead"> <a href="https://github.com/mikojimnz">Made by Miko Jimenez</a> </p>
+        </div>
+      </div>
+      <div class="col-1"></div>
+    </div>
+    <div class="row" id="content">
+      <div class="col-12">
+        <form name="typeA">
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-header">
+                <h5>Quarter 1</h5>
+              </div>
+              <div class="card-body">
+                <label for="w1">Weight</label>
+                <input type="number" name="w1" onKeyPress="updateA()" required>
+                <br>
+                <label for="g1">Grade</label>
+                <input type="number" name="g1" onKeyPress="updateA()">
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h5>Quarter 2</h5>
+              </div>
+              <div class="card-body">
+                <label for="w2">Weight</label>
+                <input type="number" name="w2" onKeyPress="updateA()" required>
+                <br>
+                <label for="g2">Grade</label>
+                <input type="number" name="g2" onKeyPress="updateA()">
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h5>Final Exam</h5>
+              </div>
+              <div class="card-body">
+                <label for="w3">Weight</label>
+                <input type="number" name="w3" onKeyPress="updateA()" required>
+                <br>
+                <label for="g3">Grade</label>
+                <input type="number" name="g3" onKeyPress="updateA()">
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h5>Your Grade</h5>
+              </div>
+              <div class="card-body">
+                <h4 id="typeAOut">---</h4>
+<!--                <p id="typeAWarn" class="hide-warn alert alert-danger">Error</p>-->
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="application/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="application/javascript" src="js/main.js"></script>
+</html>
