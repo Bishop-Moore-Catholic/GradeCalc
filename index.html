@@ -21,8 +21,8 @@
       <div class="col-lg-2 text-center">
         <h5>Mode</h5>
         <div class="btn-group  btn-group-sm" role="group" aria-label="Mode">
-          <button type="button" class="btn btn-secondary">Quarter</button>
-          <button type="button" class="btn btn-secondary">Semester</button>
+          <button type="button" class="btn btn-secondary" onClick="setQuarter()">Quarter</button>
+          <button type="button" class="btn btn-secondary" onClick="setSemester()">Semester</button>
         </div>
         <div class="pt-4">
           <p id="typeAWarn" class="hide-warn alert alert-warning">Error</p>
@@ -73,7 +73,7 @@
             </div>
           </div>
         </div>
-        <div class="card-deck row">
+        <div class="card-deck row pt-4">
           <div class="col-lg-6">
             <div class="card">
               <div class="card-header">
@@ -84,12 +84,21 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="card">
+          <div class="col-lg-2"></div>
+          <div class="col-lg-4">
+            <div class="card" id="estimator">
               <div class="card-header">
-                <h5>Estimate Your Grade</h5>
+                <h5>Estimate Final Exam</h5>
               </div>
-              <div class="card-body"> </div>
+              <div class="card-body">
+                <p>Desired Grade</p>
+                <input type="number" name="target" onKeyPress="updateA()" required>
+                <br>
+                <br>
+                <p>Grade Required On Exam</p>
+                <h5 id="typeAEst">---</h5>
+                 <p class="alert alert-danger d-none" id="warn-req">This grade cannot be achieved.</p>
+              </div>
             </div>
           </div>
         </div>
