@@ -1,7 +1,7 @@
 function updateA() {
   var weight = Number($("input[name=w1]").val()) + Number($("input[name=w2]").val()) + Number($("input[name=w3]").val());
   if (weight != 100) {
-     $("#typeAWarn").text("Warning: Weight does not equal 100%");
+     $("#typeAWarn").text("Weight does not equal 100%");
      $("#typeAWarn").removeClass("hide-warn");
   } else {
      $("#typeAWarn").addClass("hide-warn");

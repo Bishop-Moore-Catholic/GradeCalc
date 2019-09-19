@@ -8,9 +8,6 @@ label {
    padding-top: 10px;
    width: 4em;
 }
-#Title {
-  padding-top: 1vh;
-}
 .hide-warn {
    display: none !important;
 }

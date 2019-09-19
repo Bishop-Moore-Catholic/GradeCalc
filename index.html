@@ -10,24 +10,30 @@
 </head>
 
 <body>
+  <div id="Title" class="text-center">
+    <div class="jumbotron mb-3">
+      <h1 class="display-4">GradeCalc</h1>
+      <p class="lead"> <a href="https://github.com/mikojimnz">Made by Miko Jimenez</a> </p>
+    </div>
+  </div>
   <div class="container">
-    <div class="row">
-      <div class="col-1"></div>
-      <div id="Title" class="col-10 text-center">
-        <div class="jumbotron mb-3">
-          <h1 class="display-4">GradeCalc</h1>
-          <p class="lead"> <a href="https://github.com/mikojimnz">Made by Miko Jimenez</a> </p>
+    <div class="row" id="content">
+      <div class="col-lg-2 text-center">
+        <h5>Mode</h5>
+        <div class="btn-group  btn-group-sm" role="group" aria-label="Mode">
+          <button type="button" class="btn btn-secondary">Quarter</button>
+          <button type="button" class="btn btn-secondary">Semester</button>
+        </div>
+        <div class="pt-4">
+          <p id="typeAWarn" class="hide-warn alert alert-warning">Error</p>
         </div>
       </div>
-      <div class="col-1"></div>
-    </div>
-    <div class="row" id="content">
-      <div class="col-12">
-        <form name="typeA">
-          <div class="card-deck">
+      <form name="typeA" class="col-lg-10">
+        <div class="card-deck row">
+          <div class="col-lg-4">
             <div class="card">
               <div class="card-header">
-                <h5>Quarter 1</h5>
+                <h5 id="heading1">Quarter 1</h5>
               </div>
               <div class="card-body">
                 <label for="w1">Weight</label>
@@ -37,9 +43,11 @@
                 <input type="number" name="g1" onKeyPress="updateA()">
               </div>
             </div>
+          </div>
+          <div class="col-lg-4">
             <div class="card">
               <div class="card-header">
-                <h5>Quarter 2</h5>
+                <h5 id="heading2">Quarter 2</h5>
               </div>
               <div class="card-body">
                 <label for="w2">Weight</label>
@@ -49,9 +57,11 @@
                 <input type="number" name="g2" onKeyPress="updateA()">
               </div>
             </div>
+          </div>
+          <div class="col-lg-4">
             <div class="card">
               <div class="card-header">
-                <h5>Final Exam</h5>
+                <h5 id="heading3">Final Exam</h5>
               </div>
               <div class="card-body">
                 <label for="w3">Weight</label>
@@ -61,18 +71,29 @@
                 <input type="number" name="g3" onKeyPress="updateA()">
               </div>
             </div>
+          </div>
+        </div>
+        <div class="card-deck row">
+          <div class="col-lg-6">
             <div class="card">
               <div class="card-header">
                 <h5>Your Grade</h5>
               </div>
               <div class="card-body">
                 <h4 id="typeAOut">---</h4>
-                <p id="typeAWarn" class="hide-warn alert alert-danger">Error</p>
               </div>
             </div>
           </div>
-        </form>
-      </div>
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <h5>Estimate Your Grade</h5>
+              </div>
+              <div class="card-body"> </div>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 </body>
