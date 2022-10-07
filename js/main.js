@@ -92,8 +92,8 @@ function setReg() {
 }
 
 function setArt() {
-  $("input[name='w1']").val(60);
-  $("input[name='w2']").val(40);
+  $("input[name='w1']").val(40);
+  $("input[name='w2']").val(60);
   $("input[name='w3']").val(0);
 }
 
