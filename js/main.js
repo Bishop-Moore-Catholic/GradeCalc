@@ -18,22 +18,31 @@ function update() {
   $("#typeAOut").text(Number((g1 + g2 + g3).toFixed(2)));
 
   if ($('input[name=target]').val() != '') {
-    var req = Number((t - ((1 - wf) * curr)) / wf).toFixed(2);
-    $("#typeAEst").text(req);
+    var req = Number((t - ((1 - wf) * curr)) / wf).toFixed(1);
+    $('#typeAOut').addClass('d-none');
     $("input[name=g3]").prop('disabled', true);
     $("input[name=g3]").val('');
     $("input[name=g3]").addClass("alert-secondary");
 
     if (req > 100) {
+      $("#typeAEst").text(req);
       $("#warn-req").removeClass("d-none");
-    } else {
+      $("#warn-bel").addClass("d-none");
+    } else if (req < 0) {
+      $("#typeAEst").text(0);
+      $("#warn-bel").removeClass("d-none");
       $("#warn-req").addClass("d-none");
+    } else {
+      $("#typeAEst").text(req);
+      $("#warn-req").addClass("d-none");
+      $("#warn-bel").addClass("d-none");
     }
   } else {
+    $("#typeAEst").text("---");
+    $('#typeAOut').removeClass('d-none');
     $("input[name=g3]").prop('disabled', false);
     $("input[name=g3]").removeClass("alert-secondary");
     $('input[name=target]').val('');
-    $("#typeAEst").text("---");
   }
 }
 
