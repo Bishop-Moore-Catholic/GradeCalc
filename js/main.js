@@ -40,7 +40,7 @@ function update() {
 function setQuarter() {
   $("#heading1").text("Dailies");
   $("#heading2").text("Projects");
-  $("#heading3").text("Test");
+  $("#heading3").text("Tests");
   $("input[name='w1']").val(10);
   $("input[name='w2']").val(35);
   $("input[name='w3']").val(55);
