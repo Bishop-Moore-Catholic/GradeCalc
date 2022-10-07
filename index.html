@@ -3,32 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <title>GradeCalc</title>
-<meta name="author" content="Miko Jimenez">
+<meta name="author" content="Bishop Moore Catholiic">
 <meta name="description" content="Grade Calculator">
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.typekit.net/ymt8xmp.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
   <div id="Title" class="text-center">
     <div class="jumbotron mb-3">
-      <h1 class="display-4">GradeCalc</h1>
-      <p class="lead"> <a href="https://github.com/mikojimnz">Made by Miko Jimenez</a> </p>
+      <h1>Grade Calculator</h1>
     </div>
   </div>
   <div class="container">
     <div class="row" id="content">
-      <div class="col-lg-2 text-center">
+      <div class="col-12 text-center">
         <h5>Mode</h5>
-        <div class="btn-group  btn-group-sm" role="group" aria-label="Mode">
-          <button type="button" class="btn btn-secondary" onClick="setQuarter()">Quarter</button>
-          <button type="button" class="btn btn-secondary" onClick="setSemester()">Semester</button>
+        <div class="btn-group py-3" role="group" aria-label="Mode" id="mode">
+          <button type="button" class="btn btn-secondary btn-toggle1 default" onClick="setQuarter()">Quarter</button>
+          <button type="button" class="btn btn-secondary btn-toggle1" onClick="setSemester()">Semester</button>
+        </div>
+        <h5>Presets</h5>
+        <div class="btn-group btn-group-sm py-3 classLvl" role="group" aria-label="Class Level">
+          <button type="button" class="btn btn-secondary btn-toggle2 default" onClick="setAP()">AP</button>
+          <button type="button" class="btn btn-secondary btn-toggle2" onClick="setHonors()">Honors</button>
+          <button type="button" class="btn btn-secondary btn-toggle2" onClick="setReg()">Standard</button>
+          <button type="button" class="btn btn-secondary btn-toggle2" onClick="setReligion()">Religion (12th)</button>
+          <button type="button" class="btn btn-secondary btn-toggle2" onClick="setArt()">Religion (9th - 11th)</button>
+          <button type="button" class="btn btn-secondary btn-toggle2" onClick="setArt()">Fine &amp; Performing Arts/PE</button>
         </div>
         <div class="pt-4">
           <p id="typeAWarn" class="hide-warn alert alert-warning">Error</p>
         </div>
       </div>
-      <form name="typeA" class="col-lg-10">
+      <form name="typeA" class="col-12">
         <div class="card-deck row">
           <div class="col-lg-4">
             <div class="card">
@@ -37,10 +46,10 @@
               </div>
               <div class="card-body">
                 <label for="w1">Weight</label>
-                <input type="number" name="w1" onKeyPress="updateA()" required>
+                <input type="number" name="w1" onKeyPress="update()" required>
                 <br>
                 <label for="g1">Grade</label>
-                <input type="number" name="g1" onKeyPress="updateA()">
+                <input type="number" name="g1" onKeyPress="update()">
               </div>
             </div>
           </div>
@@ -51,10 +60,10 @@
               </div>
               <div class="card-body">
                 <label for="w2">Weight</label>
-                <input type="number" name="w2" onKeyPress="updateA()" required>
+                <input type="number" name="w2" onKeyPress="update()" required>
                 <br>
                 <label for="g2">Grade</label>
-                <input type="number" name="g2" onKeyPress="updateA()">
+                <input type="number" name="g2" onKeyPress="update()">
               </div>
             </div>
           </div>
@@ -65,10 +74,10 @@
               </div>
               <div class="card-body">
                 <label for="w3">Weight</label>
-                <input type="number" name="w3" onKeyPress="updateA()" required>
+                <input type="number" name="w3" onKeyPress="update()" required>
                 <br>
                 <label for="g3">Grade</label>
-                <input type="number" name="g3" onKeyPress="updateA()">
+                <input type="number" name="g3" onKeyPress="update()">
               </div>
             </div>
           </div>
@@ -92,7 +101,7 @@
               </div>
               <div class="card-body">
                 <p>Desired Grade</p>
-                <input type="number" name="target" onKeyPress="updateA()" required>
+                <input type="number" name="target" onKeyPress="update()" required>
                 <br>
                 <br>
                 <p>Grade Required On Exam</p>
@@ -106,6 +115,8 @@
     </div>
   </div>
 </body>
-<script type="application/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type="application/javascript" src="js/main.js"></script>
 </html>

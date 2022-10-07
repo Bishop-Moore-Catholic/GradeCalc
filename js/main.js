@@ -1,4 +1,4 @@
-function updateA() {
+function update() {
   var weight = Number($("input[name=w1]").val()) + Number($("input[name=w2]").val()) + Number($("input[name=w3]").val());
   if (weight != 100) {
     $("#typeAWarn").text("Weight does not equal 100%");
@@ -45,6 +45,7 @@ function setQuarter() {
   $("input[name='w2']").val(35);
   $("input[name='w3']").val(55);
   $("#estimator").addClass("d-none");
+  $("#classLvl").removeClass("d-none");
 }
 
 function setSemester() {
@@ -57,6 +58,53 @@ function setSemester() {
   $("#estimator").removeClass("d-none");
   $('input[name=target]').val('');
   $("#warn-req").addClass("d-none");
+  $("#classLvl").addClass("d-none");
 }
 
-setInterval(updateA, 1000);
+function setAP() {
+  $("input[name='w1']").val(10);
+  $("input[name='w2']").val(30);
+  $("input[name='w3']").val(60);
+}
+
+function setHonors() {
+  $("input[name='w1']").val(10);
+  $("input[name='w2']").val(35);
+  $("input[name='w3']").val(55);
+}
+
+function setReg() {
+  $("input[name='w1']").val(10);
+  $("input[name='w2']").val(40);
+  $("input[name='w3']").val(50);
+}
+
+function setArt() {
+  $("input[name='w1']").val(60);
+  $("input[name='w2']").val(40);
+  $("input[name='w3']").val(0);
+}
+
+function setReligion() {
+  $("input[name='w1']").val(20);
+  $("input[name='w2']").val(30);
+  $("input[name='w3']").val(50);
+}
+
+$(".btn-toggle1").on("click", function(e){
+  $('.btn-toggle1').removeClass('active');
+  $(this).addClass('active');
+  update();
+});
+
+$(".btn-toggle2").on("click", function(e){
+  $('.btn-toggle2').removeClass('active');
+  $(this).addClass('active');
+  update();
+});
+
+$('body').on('click keypress scroll', update());
+
+$(document).ready(function() {
+  $('.default').click();
+});

@@ -1,5 +1,10 @@
+/* Global */
 body {
-  font-family: "Helvetica";
+   font-family: futura-pt, sans-serif;
+}
+h1 {
+   text-transform: uppercase;
+   font-weight: 700;
 }
 input {
    width: 100%;
@@ -8,6 +13,16 @@ label {
    padding-top: 10px;
    width: 4em;
 }
+
+/* Classes */
+
+.active {
+   background-color: green!important;
+}
+
 .hide-warn {
    display: none !important;
+}
+.jumbotron {
+   background-color: #AE916A;
 }
