@@ -45,7 +45,7 @@ function setQuarter() {
   $("input[name='w2']").val(35);
   $("input[name='w3']").val(55);
   $("#estimator").addClass("d-none");
-  $("#classLvl").removeClass("d-none");
+  $(".classLvl").removeClass("d-none");
 }
 
 function setSemester() {
@@ -58,7 +58,7 @@ function setSemester() {
   $("#estimator").removeClass("d-none");
   $('input[name=target]').val('');
   $("#warn-req").addClass("d-none");
-  $("#classLvl").addClass("d-none");
+  $(".classLvl").addClass("d-none");
 }
 
 function setAP() {
