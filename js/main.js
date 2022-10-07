@@ -103,8 +103,12 @@ $(".btn-toggle2").on("click", function(e){
   update();
 });
 
-$('body').on('click keypress scroll', update());
+$('body').on('click keyup scroll', update());
 
 $(document).ready(function() {
   $('.default').click();
 });
+
+setInterval(function(){
+  update();
+}, 1000);
