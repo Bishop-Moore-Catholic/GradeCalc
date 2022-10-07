@@ -1,3 +1,4 @@
+// Calculate result
 function update() {
   var weight = Number($("input[name=w1]").val()) + Number($("input[name=w2]").val()) + Number($("input[name=w3]").val());
   if (weight != 100) {
@@ -45,6 +46,8 @@ function update() {
     $('input[name=target]').val('');
   }
 }
+
+// Button Functions
 
 function setQuarter() {
   $("#heading1").text("Dailies");
@@ -112,6 +115,15 @@ $(".btn-toggle2").on("click", function(e){
   update();
 });
 
+// Prevent non digits
+$('input').on('keypress', function(e){
+  return e.metaKey || // cmd/ctrl
+    e.which <= 0 || // arrow keys
+    e.which == 8 || // delete key
+    /[0-9]/.test(String.fromCharCode(e.which)); // numbers
+})
+
+// Update on load
 $('body').on('click keyup scroll', update());
 
 $(document).ready(function() {
