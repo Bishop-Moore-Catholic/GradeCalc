@@ -53,7 +53,7 @@ function reset() {
   $("input[name='g1']").val(0);
   $("input[name='g2']").val(0);
   $("input[name='g3']").val(0);
-  $("input[name='target']").val(0);
+  $("input[name='target']").val('');
 }
 
 function setQuarter() {
