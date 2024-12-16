@@ -80,36 +80,6 @@ function setSemester() {
   $(".classLvl").addClass("d-none");
 }
 
-function setAP() {
-  $("input[name='w1']").val(10);
-  $("input[name='w2']").val(30);
-  $("input[name='w3']").val(60);
-}
-
-function setHonors() {
-  $("input[name='w1']").val(10);
-  $("input[name='w2']").val(35);
-  $("input[name='w3']").val(55);
-}
-
-function setReg() {
-  $("input[name='w1']").val(10);
-  $("input[name='w2']").val(40);
-  $("input[name='w3']").val(50);
-}
-
-function setArt() {
-  $("input[name='w1']").val(40);
-  $("input[name='w2']").val(60);
-  $("input[name='w3']").val(0);
-}
-
-function setReligion() {
-  $("input[name='w1']").val(20);
-  $("input[name='w2']").val(30);
-  $("input[name='w3']").val(50);
-}
-
 $(".btn-toggle1").on("click", function(e){
   $('.btn-toggle1').removeClass('active');
   $(this).addClass('active');
