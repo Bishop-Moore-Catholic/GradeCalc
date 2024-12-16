@@ -21,6 +21,7 @@ function update() {
   if ($('input[name=target]').val() != '') {
     var req = Number((t - ((1 - wf) * curr)) / wf).toFixed(1);
     $('#typeAOut').addClass('d-none');
+    $('#gradeCard').addClass('d-none');
     $("input[name=g3]").prop('disabled', true);
     $("input[name=g3]").val('');
     $("input[name=g3]").addClass("alert-secondary");
@@ -41,6 +42,7 @@ function update() {
   } else {
     $("#typeAEst").text("---");
     $('#typeAOut').removeClass('d-none');
+    $('#gradeCard').removeClass('d-none');
     $("input[name=g3]").prop('disabled', false);
     $("input[name=g3]").removeClass("alert-secondary");
     $('input[name=target]').val('');
@@ -65,6 +67,7 @@ function setQuarter() {
   $("input[name='w3']").val(55);
   $("#estimator").addClass("d-none");
   $(".classLvl").removeClass("d-none");
+  reset();
 }
 
 function setSemester() {
